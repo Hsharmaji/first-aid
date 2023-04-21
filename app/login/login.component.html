@@ -1,0 +1,23 @@
+
+<div class="container pop-in">
+    <div class="box">
+    <h2>Login or Signup</h2>
+    <form>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" [(ngModel)]="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password" required>
+      </div>
+      <button type="button" class="btn btn-primary" (click)="login()">Login</button>
+      <button type="button" class="btn btn-secondary" (click)="signup()">Signup</button>
+      <div class="box2">
+      <div *ngIf="login_done" style="color:green;">Successfully Logged In</div>
+      <div *ngIf="signin_done" style="color:green;">Successfully Signed In</div>
+      <div *ngIf="login_error" style="color:red;">Incorrect Username or Password</div>
+      </div>
+    </form>
+    </div>
+  </div>

@@ -1,0 +1,39 @@
+<div class="bg">
+<h1>Medicine Reminder</h1>
+<div class="form-container">
+<form (submit)="submitForm()">
+    <label for="med_name">Medicine Name:</label>
+    <input type="text" id="med_name" [(ngModel)]="med_name" name="med_name" required>
+    <br>
+    <label for="med_time">Time:</label>
+    <input type="text" id="med_time" [(ngModel)]="med_time" name="med_time" required>
+    <br>
+    <div class="checkbox-container">
+        <label class="checkbox-label" for="am">
+            <input type="radio" id="am" [(ngModel)]="am" name="time" value="am">
+            AM:
+        </label>
+        <label class="checkbox-label" for="pm">
+            <input type="radio" id="pm" [(ngModel)]="pm" name="time" value="pm">
+            PM:
+        </label>
+    </div>
+
+    
+    <br>
+    <label for="bef_aft">Before/After </label>
+    <select id="bef_aft" [(ngModel)]="bef_aft" name="bef_aft" required>
+        <option value="before">Before</option>
+        <option value="after">After</option>
+    </select>
+    <label for="meal">Meal</label>
+    <select id="meal" [(ngModel)]="meal" name="meal" required>
+        <option value="breakfast">Breakfast</option>
+        <option value="lunch">Lunch</option>
+        <option value="dinner">Dinner</option>
+    </select>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+</div>
+</div>

@@ -1,0 +1,118 @@
+/* reminder.component.css */
+
+/* Add a gradient background color */
+.bg {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to bottom right, #a7bcd3, #e3a5e5);
+    padding: 20px;
+    height:100vh;
+}
+
+/* Add a floating animation to the heading */
+h1 {
+    text-align: center;
+    color: #260b93;
+    animation: float 2s ease infinite;
+    margin: 30px;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Add a border with a shadow to the form */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Add a hover effect to labels and inputs */
+label, input, select {
+    display: block;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+label:hover,
+input:hover,
+select:hover {
+    transform: scale(1.05);
+}
+
+/* Add a border with rounded edges and a focus effect to text inputs and select boxes */
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+}
+
+/* Add a custom checkbox style */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkbox-label {
+    margin-right: 10px;
+    color: #007bff;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked::before {
+    content: '\2713';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #007bff;
+}
+
+/* Add a custom hover effect to the submit button */
+input[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}

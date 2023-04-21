@@ -1,0 +1,109 @@
+.container {
+  opacity: 0; /* Set initial opacity to 0 */
+  transition: opacity 0.5s ease-in; /* Add transition effect for opacity */
+  animation: fadeIn 1s ease-in 0.5s forwards; /* Add animation for fade-in with 0.5s delay */
+  background-image: url("./healthprofile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw; /* Use viewport width for 100% width */
+  top: 0; /* Position from top */
+  left: 0; /* Position from left */
+  color:rgb(179, 15, 15);
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  max-width: 500px;
+  margin: 10px auto;
+  background-color: transparent;
+  font-family: Arial, sans-serif;
+}
+
+label,
+textarea,
+input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+textarea,
+input[type="text"],
+input[type="number"],
+select {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  width: 100%;
+
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.output {
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #f8f8f884;
+  font-size: 20px;
+  width: 50%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.output-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.output-medication {
+  margin-bottom: 5px;
+}
+
+/* .no-medication {
+  color: red;
+  font-style: italic;
+} */
+input[type="button"]{
+    background-color: #7215c4;
+    color: #fff;
+    border: none;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  input[type="button"]:hover {
+    background-color: #a5b6c7;
+  }

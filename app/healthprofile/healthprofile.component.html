@@ -1,0 +1,43 @@
+<div class="container" [ngClass]="{'fade-in': animate}">
+    <h1>Health Profile</h1>
+    <form action="/action_page.php">
+        <!-- Added a label text for blood group input field -->
+        <label for="bloodGroup">Blood Group:</label>
+        <!-- Changed the input type for blood group to select for a dropdown menu -->
+        <select id="bloodGroup" name="bloodGroup" required [(ngModel)]="bloodGroup">
+          <option value="0">Select Blood group:</option>
+          <option value="A+">A+</option>
+          <option value="B+">B+</option>
+          <option value="AB+">AB+</option>
+          <option value="O+">O+</option>
+          <option value="A-">A-</option>
+          <option value="b-">B-</option>
+          <option value="AB-">AB-</option>
+          <option value="O-">O-</option>
+        </select>
+  
+        <label for="height">Height (in cm):</label>
+        <input type="number" id="height" name="height" required [(ngModel)]="height"> 
+  
+        <label for="weight">Weight (in kg):</label>
+        <input type="number" id="weight" name="weight" required [(ngModel)]="weight">
+  
+       
+        
+        <label for="pastHealthProblems">Past Health Problems:</label>
+        <textarea id="pastHealthProblems" name="pastHealthProblems" [(ngModel)]="pastHealthProblemsInput"></textarea>
+        
+        <label for="currentHealthProblem">Current Health Problem:</label>
+        <textarea id="currentHealthProblem" name="currentHealthProblem" [(ngModel)]="healthProblemsInput"></textarea>
+        
+        <input type="submit" (click)="submitHealthProblems()" value="Submit">
+        <input type="button" (click)="setreminder()" value="Set Reminder">
+  </form>
+  <div *ngIf="relevantMedications.length > 0" class="output">
+    <p>Relevant Medication: {{ relevantMedications.join(', ') }}</p>
+  </div>
+  <div *ngIf="relevantMedications.length === 0" class="output">
+    
+  </div>
+</div>
+
